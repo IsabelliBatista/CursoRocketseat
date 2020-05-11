@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulando DOM</title>
+</head>
+
+<body>
+    <div id="app">
+        <!-- <button onclick="mostraAlerta()">me clique</button> -->
+        <!-- <input type="text" name="nome" id="nome">
+        <button class="botao">adicionar</button> -->
+
+        <!-- <div class="box"></div> -->
+
+        <button class="btn">clicar</button>
+        <!--
+        <ul class="nomesul">
+            <li class="nome1"></li>
+            <li class="nome2"></li>
+            <li class="nome3"></li>
+        </ul> -->
+
+    </div>
+
+    <script>
+        //PEGANDO ELEMENTO
+        // var inputElement = document.querySelector('div#app input[name=nome]')
+        // var btnElement = document.querySelector('button.botao');
+
+        // btnElement.onclick = function () {
+        //     //assim ele vai pegar o texto digitado e colocar no alert
+        //     var texto = inputElement.value;
+        //     alert(texto);
+        // }
+
+        // //CRIANDO ELEMENTO
+        // //cria a tag
+        // var linkElement = document.createElement('a');
+        // //coloca os atributos dela, no caso href
+        // linkElement.setAttribute('href', '#');
+
+        // //vai criar o texto 
+        // var textElement = document.createTextNode('acessar o site');
+        // linkElement.appendChild(textElement);
+
+        // //appendchild cria o elemento
+        // var containerElement = document.querySelector('#app');
+        // containerElement.appendChild(linkElement);
+
+
+        // //ADICIONANDO CSS 
+        // var boxElement = document.querySelector('.box');
+        // boxElement.style.width = '100px';
+        // boxElement.style.height = '100px';
+        // boxElement.style.backgroundColor = '#000';
+
+        //////////////////// DESAFIO /////////////////////
+
+
+        //1
+        // var botao = document.querySelector('.btn');
+        // botao.onclick = function () {
+
+        //     var elemento = document.createElement('div');
+        //     elemento.setAttribute('class', 'elementocriado');
+
+        //     var bloco = document.querySelector('#app');
+        //     bloco.appendChild(elemento);
+
+        //     var boxcriado = document.querySelector('.elementocriado');
+        //     boxcriado.style.width = '100px';
+        //     boxcriado.style.height = '100px';
+        //     boxcriado.style.backgroundColor = '#000';
+        // }
+
+        //2
+        var botao = document.querySelector('.btn');
+        botao.onclick = function () {
+
+            var elemento = document.createElement('div');
+            elemento.setAttribute('class', 'elementocriado');
+
+            var bloco = document.querySelector('#app');
+            bloco.appendChild(elemento);
+
+            var boxcriado = document.querySelector('.elementocriado');
+            boxcriado.style.width = '100px';
+            boxcriado.style.height = '100px';
+            boxcriado.style.backgroundColor = '#000';
+        }
+        var blococriado = document.querySelector('.elementocriado');
+        blococriado.onmouseover =
+
+            function getRandomColor() {
+                var letters = "0123456789ABCDEF";
+                var color = "#";
+                for (var i = 0; i < 6; i++) {
+                    color += letters[Math.floor(Math.random() * 16)];
+                    console.log(color);
+                }
+                return color;
+            }
+        var newColor = getRandomColor(); // #E943F0
+
+        //3
+        // var nomes = ["Diego", "Gabriel", "Lucas"];
+        // var preencher = document.querySelector('.nome1');
+        // preencher.document.createTextNode('nomes[0]');
+
+
+
+    </script>
+</body>
+
+</html>
